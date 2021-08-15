@@ -13,7 +13,7 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 
     const currentAmount = document.getElementById('current-amount');
     const totalCurrentAmount = currentAmount.innerText;
-    currentAmount.innerText = parseInt(totalCurrentAmount) + parseInt(inputDeposited);
+    currentAmount.innerText = parseFloat(totalCurrentAmount) + parseFloat(inputDeposited);
 });
 
 
@@ -31,5 +31,5 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
 
     const currentAmount = document.getElementById('current-amount');
     const totalCurrentAmount = currentAmount.innerText;
-    currentAmount.innerText = parseInt(totalCurrentAmount) - parseInt(inputWithdrawn);
+    currentAmount.innerText = parseFloat(totalCurrentAmount) - parseFloat(inputWithdrawn);
 });
