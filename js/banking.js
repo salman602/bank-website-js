@@ -28,19 +28,19 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 
 document.getElementById('withdraw-btn').addEventListener('click', function () {
     const withdrawInput = document.getElementById('withdraw-input');
-    const inputWithdrawn = withdrawInput.value;
+    const withdrawText = withdrawInput.value;
 
     // console.log(inputWithdrawn)
 
     const withdrawAmount = document.getElementById('withdraw-amount');
     const previousWithdrawn = withdrawAmount.innerText;
-    const newWithdrawn = parseFloat(previousWithdrawn) + parseFloat(inputWithdrawn);
+    const newWithdrawn = parseFloat(previousWithdrawn) + parseFloat(withdrawText);
     withdrawAmount.innerText = newWithdrawn;
 
 
     const currentAmount = document.getElementById('current-amount');
     const totalCurrentAmount = currentAmount.innerText;
-    currentAmount.innerText = parseFloat(totalCurrentAmount) - parseFloat(inputWithdrawn);
+    currentAmount.innerText = parseFloat(totalCurrentAmount) - parseFloat(withdrawText);
 
     // clear
     withdrawInput.value = '';
